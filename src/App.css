@@ -1,42 +1,178 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*, body, input, button, a {
+  font-family: "Montserrat", serif;
+  color: #b3b3b3;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+  background-color: #000;
+  height: 100vh;
+  overflow-y: hidden;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.flex {
+  display: flex;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.button {
+  color: #000;
+  background-color: #fff;
+  border-radius: 30px;
+  font-weight: 700;
+  padding: 10px 15px;
 }
 
-.card {
-  padding: 2em;
+/* Grid */
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  grid-template-colums: auto 1fr;
+  gap: 8px;
+  padding: 8px;
+  grid-template-areas:
+    "menu menu"
+    "left right"
+    "bottom bottom";
 }
 
-.read-the-docs {
-  color: #888;
+/* Menu */
+.header {
+  grid-area: menu;
+  height: 64px;
+  justify-content: space-between;
+  margin: calc(8px*-1);
+  padding: 8px;
+}
+
+.logo img {
+  height: 32px;
+  margin: 14px 18px;
+}
+
+.header .logo, .header .actions {
+  flex: 1;
+}
+
+.header .actions {
+  justify-content: end;
+  gap: 18px;
+}
+
+.header .home {
+  background-color: #1f1f1f;
+  border-radius: 30px;
+  display: block;
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+}
+
+.header .search {
+  flex: 1;
+  justify-content: center;
+  width: 100%;
+  gap: 8px;
+}
+
+.header .search-box {
+  background-color: #1f1f1f;
+  height: 48px;
+  border-radius: 30px;
+}
+
+.header .search-box input {
+  background: transparent;
+  padding: 12px 84px 12px 0px;
+}
+
+.header .search-box .navigation-btn {
+  border-inline-start: 1px solid #b3b3b3;
+}
+
+.search-box .search-icon {
+  margin: 12px;
+}
+
+.search-box .navigation-icon {
+  margin: 0 12px;
+}
+
+.header .download, .header .signup {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.header .download span {
+  margin: 0 4px;
+}
+
+.header .login {
+  height: 48px;
+  padding: 0 30px;
+}
+
+/* Sidebar */
+.sidebar {
+  grid-area: left;
+  width: 403px;
+  background: #121212;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.sidebar-header {
+  padding: 4px 24px;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.sidebar-header span {
+  padding-left: 10px;
+  font-weight: 700;
+}
+
+.sidebar-card {
+  background-color: #1f1f1f;
+  font-size: 14px;
+  border-radius: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 16px 20px;
+  margin: 8px
+}
+
+.sidebar-card h1 {
+  font-size: 16px;
+}
+
+.sidebar-card p {
+  font-weight: 600;
+}
+
+.sidebar-footer ul {
+  font-size: 11px;
+  padding: 0 24px;
+  margin: 24px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sidebar-footer li {
+  margin: 0 20px 20px 0;
+}
+
+.sidebar-footer button {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 24px;
+  padding: 5px 15px;
+  border: 1px solid #fff;
+  border-radius: 30px;
 }

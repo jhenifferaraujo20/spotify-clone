@@ -1,0 +1,57 @@
+/* Reset.css */
+
+/* Remove as margens e o padding padrão de todos os elementos */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Define uma altura mínima para o corpo */
+html, body {
+  min-width: 100vw;
+  height: 100%;
+}
+
+/* Remove a decoração de links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove os pontos de lista */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remover a borda e os espaços padrão de campos de formulário */
+input,
+button,
+textarea,
+select {
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Ajuste de imagens para não estourar o tamanho da tela */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Normaliza os estilos das tabelas */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Faz com que os botões usem a aparência padrão */
+button {
+  background-color: transparent;
+  cursor: pointer;
+}
