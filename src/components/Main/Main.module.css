@@ -1,0 +1,83 @@
+/* Main Panel */
+.mainPanel {
+  grid-area: right;
+  background-color: #121212;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 8px;
+  padding: 25px;
+}
+
+.mainPanel h1 {
+  font-size: 24px;
+  color: #ffffff;
+  margin: 30px 0 20px;
+}
+
+.mainPanel .cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin: 25px 0 40px;
+}
+
+.mainFooter {
+  padding: 40px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 14px;
+}
+
+.mainFooterNav {
+  display: flex;
+}
+
+.mainFooterNav ul {
+  margin: 0 24px 32px 0;
+  flex: 2;
+}
+
+.mainFooterTitle {
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.mainFooterNav ul li {
+  margin-bottom: 8px;
+}
+
+.mainFooterNav ul li a {
+  color: #b3b3b3;
+}
+
+.socials {
+  display: flex;
+  flex: 2;
+  justify-content: space-evenly;
+}
+
+.socials a {
+  background-color: #292929;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+.socials a:hover {
+  background-color: #727272;
+}
+
+.socials a svg {
+  color: #fff !important;
+}
+
+.border {
+  border: 0;
+  border-block-start: 1px solid;
+  border-color: rgba(255, 255, 255, 0.1);
+}

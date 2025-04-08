@@ -1,30 +1,31 @@
 import { LibraryBig, Plus, Globe } from "lucide-react";
+import styles from './Sidebar.module.css';
 
 function Sidebar() {
     return (
-        <aside className="sidebar">
-            <header className="sidebar-header flex">
+        <aside className={styles.sidebar}>
+            <header className={`flex ${styles.sidebarHeader}`}>
                 <div className="flex">
                     <LibraryBig />
                     <span>Sua Biblioteca</span>
                 </div>
-                <div><Plus /></div>
+                <div className={styles.plusBtnDiv}><Plus className={styles.plusBtn} /></div>
             </header>
-            <div className="sidebar-card flex">
-                <div className="sidebar-card__content">
+            <div className={`flex ${styles.sidebarCard}`}>
+                <div className={styles.sidebarCardContent}>
                     <h1>Crie sua primeira playlist</h1>
                     <p>É fácil, vamos te ajudar.</p>
                 </div>
                 <button className="button">Criar playlist</button>
             </div>
-            <div className="sidebar-card flex">
-                <div className="sidebar-card__content"> 
+            <div className={`flex ${styles.sidebarCard}`}>
+                <div className={styles.sidebarCardContent}> 
                     <h1>Que tal seguir um podcast novo?</h1>
                     <p>Avisaremos você sobre novos episódios.</p>
                 </div>
                 <button className="button">Explore podcasts</button>
             </div>
-            <footer className="sidebar-footer">
+            <footer className={styles.sidebarFooter}>
                 <ul>
                     <li>Legal</li>
                     <li>Segurança e Centro de privacidade</li>
@@ -34,7 +35,7 @@ function Sidebar() {
                     <li>Acessibilidade</li>
                 </ul>
                 <button className="flex">
-                    <Globe color="#fff" size={16} />Português do Brasil
+                    <Globe className={styles.btnIcon} size={16} />Português do Brasil
                 </button>
             </footer>
         </aside>

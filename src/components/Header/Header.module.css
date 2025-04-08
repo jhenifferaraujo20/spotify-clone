@@ -1,0 +1,80 @@
+/* Menu */
+.header {
+  grid-area: menu;
+  height: 64px;
+  justify-content: space-between;
+  margin: calc(8px*-1);
+  padding: 8px;
+}
+
+.logo img {
+  height: 32px;
+  margin: 14px 18px;
+}
+
+.header .logo,
+.header .actions {
+  flex: 1;
+}
+
+.header .actions {
+  justify-content: end;
+  gap: 18px;
+}
+
+.header .home {
+  background-color: #1f1f1f;
+  border-radius: 30px;
+  display: block;
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+}
+
+.header .search {
+  flex: 1;
+  justify-content: center;
+  width: 100%;
+  gap: 8px;
+}
+
+.header .searchBox {
+  background-color: #1f1f1f;
+  height: 48px;
+  border-radius: 30px;
+}
+
+.header .searchBox input {
+  background: transparent;
+  padding: 12px 84px 12px 0px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.header .searchBox .navigationBtn {
+  border-inline-start: 1px solid #b3b3b3;
+}
+
+.searchBox .searchIcon {
+  margin: 12px;
+}
+
+.searchBox .navigationIcon {
+  margin: 0 12px;
+}
+
+.header .download,
+.header .signup {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.header .download span {
+  margin: 0 4px;
+}
+
+.header .login {
+  height: 48px;
+  padding: 0 30px;
+}

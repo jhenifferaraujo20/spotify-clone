@@ -1,0 +1,22 @@
+/* Footer */
+.footer {
+    grid-area: bottom;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 500;
+    background-image: linear-gradient(90deg, #af2896, #509bf5);
+    padding: 15px 24px 15px 15px;
+    line-height: 1.5;
+  }
+  
+  .bold {
+    font-weight: 700;
+  }
+  
+  .footer p, .footer buttom {
+    color: #ffffff;
+  }
+  
+  .footer button {
+    height: 48px;
+  }

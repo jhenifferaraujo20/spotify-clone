@@ -1,0 +1,89 @@
+/* Sidebar */
+.sidebar {
+  grid-area: left;
+  width: 403px;
+  background: #121212;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.sidebarHeader {
+  padding: 4px 24px;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.sidebarHeader span {
+  padding-left: 10px;
+  font-weight: 700;
+}
+
+.sidebarHeader .plusBtnDiv {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3 ease;
+}
+
+.sidebarHeader .plusBtnDiv:hover {
+  background-color: #1f1f1f;
+  color: #ffffff;
+}
+
+.sidebarCard {
+  background-color: #1f1f1f;
+  font-size: 14px;
+  border-radius: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 16px 20px;
+  margin: 8px;
+}
+
+.sidebarCardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebarCard h1 {
+  font-size: 16px;
+}
+
+.sidebarCard p {
+  font-weight: 600;
+}
+
+.sidebarFooter ul {
+  font-size: 11px;
+  padding: 0 24px;
+  margin: 24px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sidebarFooter li {
+  margin: 0 20px 20px 0;
+}
+
+.sidebarFooter button {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 24px;
+  padding: 5px 15px;
+  border: 1px solid #fff;
+  border-radius: 30px;
+}
+
+.sidebarFooter .btnIcon {
+  -webkit-margin-end: 8px;
+  margin-inline-end: 8px;
+  color: #ffffff;
+}

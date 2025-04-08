@@ -1,8 +1,14 @@
-@import './styles/variables.css';
 @import './styles/reset.css';
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 *, body, input, button, a {
-    font-family: var(--font-inter);
+    font-family: 'Inter', sans-serif;
+}
+
+body, input, button, a {
     color: #b3b3b3;
+}
+
+.mainFooterTitle, h1 {
+    color: #ffffff;
 }
