@@ -11,13 +11,17 @@ function Sidebar() {
                 <div><Plus /></div>
             </header>
             <div className="sidebar-card flex">
-                <h1>Crie sua primeira playlist</h1>
-                <p>É fácil, vamos te ajudar.</p>
+                <div className="sidebar-card__content">
+                    <h1>Crie sua primeira playlist</h1>
+                    <p>É fácil, vamos te ajudar.</p>
+                </div>
                 <button className="button">Criar playlist</button>
             </div>
             <div className="sidebar-card flex">
-                <h1>Que tal seguir um podcast novo?</h1>
-                <p>Avisaremos você sobre novos episódios.</p>
+                <div className="sidebar-card__content"> 
+                    <h1>Que tal seguir um podcast novo?</h1>
+                    <p>Avisaremos você sobre novos episódios.</p>
+                </div>
                 <button className="button">Explore podcasts</button>
             </div>
             <footer className="sidebar-footer">

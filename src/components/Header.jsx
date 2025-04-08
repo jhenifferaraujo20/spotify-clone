@@ -11,7 +11,7 @@ const Header = () => {
                 <button className="home"><House /></button>
                 <div className="search-box flex">
                     <Search className='search-icon' />
-                    <input type="text" placeholder='O que você quer ouvir?' />
+                    <input type="text" placeholder='O que você quer ouvir?' id="search-input" maxLength={800} />
                     <button className='navigation-btn flex'><Navigation size={21} className='navigation-icon' /></button>
                 </div>
             </div>
