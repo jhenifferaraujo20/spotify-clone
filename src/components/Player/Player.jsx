@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect, useCallback } from 'react';
 import { Play, Pause, Shuffle, SkipBack, SkipForward, Repeat, VolumeX, Volume1, Volume2, Volume } from 'lucide-react';
 import styles from './Player.module.css';
 
@@ -10,7 +10,7 @@ export default function Player() {
     const [volume, setVolume] = useState(1);
     const [previousVolume, setPreviousVolume] = useState(1);
 
-    const togglePlay = () => {
+    const togglePlay = useCallback(() => {
         const audio = audioRef.current;
         if (!audio) return;
 
@@ -21,7 +21,7 @@ export default function Player() {
         }
 
         setIsPlaying(!isPlaying);
-    };
+    }, [isPlaying]);
 
     const handleTimeChange = (e) => {
         const newTime = Number(e.target.value);
@@ -65,6 +65,19 @@ export default function Player() {
             }
         }
     };
+
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            const tag = e.target.tagName.toLowerCase();
+            if (e.code === 'Space' && tag !== 'input' && tag !== 'textarea') {
+                e.preventDefault();
+                togglePlay();
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [togglePlay]);
 
     return (
         <div className={`${styles.player} ${styles.flex}`}>
