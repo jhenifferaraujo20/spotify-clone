@@ -1,5 +1,5 @@
 const clientId = "0cfc152a5ed6485488604111d050af9c";
-const redirectUri = "http://127.0.0.1:5173/callback";
+const redirectUri = "https://fanciful-belekoy-f03886.netlify.app/callback";
 const scopes = [
     "user-read-private",
     "user-read-email",

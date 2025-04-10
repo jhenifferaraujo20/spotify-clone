@@ -1,6 +1,6 @@
 export async function getAccessToken(code) {
     const clientId = "0cfc152a5ed6485488604111d050af9c";
-    const redirectUri = "http://127.0.0.1:5173/callback"; // o mesmo que você registrou no Spotify
+    const redirectUri = "https://fanciful-belekoy-f03886.netlify.app/callback";
     const codeVerifier = localStorage.getItem("code_verifier");
 
     const body = new URLSearchParams({
