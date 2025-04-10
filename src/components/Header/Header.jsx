@@ -1,6 +1,7 @@
 import logo from '../../assets/spotify-2.svg';
 import styles from './Header.module.css';
 import { House, Search, Navigation, CircleArrowDown } from 'lucide-react';
+import { redirectToAuthCodeFlow  } from '../../auth/spotifyAuth';
 
 const Header = () => {
     return (
@@ -22,7 +23,7 @@ const Header = () => {
                     <span>Instalar aplicativo</span>
                 </a>
                 <button className={styles.signup}>Inscreva-se</button>
-                <button className={`button ${styles.login}`}>Entrar</button>
+                <button onClick={redirectToAuthCodeFlow} className={`button ${styles.login}`}>Entrar</button>
             </div>
         </header>
     );
